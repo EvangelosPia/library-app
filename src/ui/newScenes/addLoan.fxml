@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controllers.AddLoanDialogController"
+      stylesheets="@addBookStyle.css"
+      spacing="10"
+      prefWidth="500"
+      prefHeight="450"
+      style="-fx-background-color: #eeece4;">
+
+    <padding>
+        <Insets top="15" right="20" bottom="15" left="20"/>
+    </padding>
+
+    <Label text="Create New Loan" styleClass="section-title">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+
+    <Separator/>
+
+    <!-- Form Fields -->
+    <GridPane hgap="10" vgap="10" VBox.vgrow="SOMETIMES">
+        <columnConstraints>
+            <ColumnConstraints minWidth="80" prefWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Book Selection -->
+        <Label text="Book:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <TextField fx:id="bookSearchField" promptText="Type to search books..."/>
+            <ComboBox fx:id="bookComboBox" promptText="Choose a book..." maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- Member Selection -->
+        <Label text="Member:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="memberSearchField" promptText="Type to search members..."/>
+            <ComboBox fx:id="memberComboBox" promptText="Choose a member..." maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- Loan Date -->
+        <Label text="Loan Date:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="loanDateField" editable="false"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   style="-fx-background-color: #f0f0f0;"/>
+
+    </GridPane>
+
+    <!-- Info Label -->
+    <Label fx:id="bookInfoLabel" style="-fx-text-fill: #7f8c8d; -fx-font-size: 10px;"
+           text="✓ Only available books shown" wrapText="true"/>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" wrapText="true" visible="false"
+           style="-fx-font-size: 11px; -fx-padding: 8px; -fx-background-radius: 5px;"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Create Loan" styleClass="success-button" prefWidth="110"/>
+        <Button fx:id="cancelButton" text="Cancel" styleClass="secondary-button" prefWidth="90"/>
+    </HBox>
+
+</VBox>

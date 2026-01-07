@@ -1,0 +1,106 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-text-fill: #5a5a5a;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f2a556;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-border-color: #f5d18d;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: #f5b563;
+    -fx-border-width: 2px;
+    -fx-background-insets: 0;
+}
+
+.text-field:hover {
+    -fx-border-color: #f5b563;
+}
+
+.check-box {
+    -fx-text-fill: #5a5a5a;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #f5d18d;
+    -fx-border-radius: 3px;
+    -fx-border-width: 2px;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #f5b563;
+    -fx-border-color: #f5b563;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.success-button {
+    -fx-background-color: #f5b563;
+    -fx-text-fill: white;
+}
+
+.success-button:hover {
+    -fx-background-color: #f2a556;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.success-button:pressed {
+    -fx-background-color: #e89640;
+}
+
+.secondary-button {
+    -fx-background-color: #bdc3c7;
+    -fx-text-fill: white;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #95a5a6;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #7f8c8d;
+}
+
+.separator {
+    -fx-background-color: #f5d18d;
+}
+
+.separator .line {
+    -fx-border-color: #f5d18d;
+    -fx-border-width: 1px;
+}
+
+
+*:focused {
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

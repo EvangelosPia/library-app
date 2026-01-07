@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controllers.AddMemberDialogController"
+      stylesheets="@addBookStyle.css"
+      spacing="15"
+      prefWidth="450"
+      prefHeight="400"
+      style="-fx-background-color: #eeece4;">
+
+    <padding>
+        <Insets top="20" right="25" bottom="20" left="25"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Add New Member" styleClass="section-title">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Label>
+
+    <Separator/>
+
+    <!-- Form Fields -->
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Title Field -->
+        <Label text="First name:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="firstnameField" promptText="Enter first name"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <!-- Author Field -->
+        <Label text="Last name:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="lastnameField" promptText="Enter last name"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <!-- ISBN Field -->
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="emailField" promptText="Enter Email"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <!-- Genre Field -->
+        <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="phoneField" promptText="Enter phone"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    </GridPane>
+
+    <!-- Message Label (for both errors and success) -->
+    <Label fx:id="messageLabel" wrapText="true" visible="false"
+           style="-fx-font-size: 12px; -fx-padding: 10px; -fx-background-radius: 5px;"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Save" styleClass="success-button" prefWidth="100"/>
+        <Button fx:id="cancelButton" text="Cancel" styleClass="secondary-button" prefWidth="100"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controllers.AddBookDialogController"
+      stylesheets="@addBookStyle.css"
+      spacing="15"
+      prefWidth="450"
+      prefHeight="400"
+      style="-fx-background-color: #eeece4;">
+
+    <padding>
+        <Insets top="20" right="25" bottom="20" left="25"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Add New Book" styleClass="section-title">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Label>
+
+    <Separator/>
+
+    <!-- Form Fields -->
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Title Field -->
+        <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="titleField" promptText="Enter book title"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <!-- Author Field -->
+        <Label text="Author:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="authorField" promptText="Enter author name"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <!-- ISBN Field -->
+        <Label text="ISBN:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="isbnField" promptText="Enter ISBN"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <!-- Genre Field -->
+        <Label text="Genre:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <TextField fx:id="genreField" promptText="Enter genre"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <!-- Available Checkbox -->
+        <Label text="Available:" GridPane.columnIndex="0" GridPane.rowIndex="4"
+               style="-fx-font-weight: bold; -fx-text-fill: #5a5a5a;"/>
+        <CheckBox fx:id="availableCheckBox" selected="true"
+                  text="Book is available for loan"
+                  GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </GridPane>
+
+    <!-- Message Label (for both errors and success) -->
+    <Label fx:id="messageLabel" wrapText="true" visible="false"
+           style="-fx-font-size: 12px; -fx-padding: 10px; -fx-background-radius: 5px;"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Save" styleClass="success-button" prefWidth="100"/>
+        <Button fx:id="cancelButton" text="Cancel" styleClass="secondary-button" prefWidth="100"/>
+    </HBox>
+
+</VBox>
