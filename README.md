@@ -23,10 +23,12 @@ Main view of the desktop application with the option to view
 <img width="1579" height="984" alt="LibraryApp" src="https://github.com/user-attachments/assets/5c981287-7977-4ec2-8e6d-0e071a2cb41a" />
 
 View of the app after the user pressed the "Add Book" Button
+
 <img width="554" height="610" alt="AddBook" src="https://github.com/user-attachments/assets/e1006b21-220c-407f-858b-ab17daba7067" />
 
 View of the Dashboard
-<img width="1574" height="980" alt="DashView" src="https://github.com/user-attachments/assets/8269e7c5-becf-4939-b13d-e0ee9ca251b1" />
+<img width="1569" height="984" alt="DashView" src="https://github.com/user-attachments/assets/5fbb61d1-ef86-49dd-89a1-3c9d8f1491a3" />
+
 
 
 
