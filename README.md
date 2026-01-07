@@ -100,7 +100,7 @@ LibraryApp/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/library-app.git
+git clone https://github.com/EvangelosPia/library-app.git
 cd library-app
 ```
 
