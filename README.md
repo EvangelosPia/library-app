@@ -6,7 +6,7 @@ INTERFACE APPLICATIONS
 
 
 ## IMPORTANT 
-The logo is AI generated and not my design
+The logo is a free design from canva and it is used for aesthetic purposes, not commercial use
 
 ## Features
 
@@ -21,6 +21,14 @@ The logo is AI generated and not my design
 
 Main view of the desktop application with the option to view
 <img width="1579" height="984" alt="LibraryApp" src="https://github.com/user-attachments/assets/5c981287-7977-4ec2-8e6d-0e071a2cb41a" />
+
+View of the app after the user pressed the "Add Book" Button
+<img width="554" height="610" alt="AddBook" src="https://github.com/user-attachments/assets/e1006b21-220c-407f-858b-ab17daba7067" />
+
+View of the Dashboard
+<img width="1574" height="980" alt="DashView" src="https://github.com/user-attachments/assets/8269e7c5-becf-4939-b13d-e0ee9ca251b1" />
+
+
 
 ##  Technologies Used
 
@@ -37,7 +45,7 @@ Before running this application, ensure you have:
 1. **Java Development Kit (JDK) 17 or higher**
    - Download from [Oracle](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/)
 
-2. **JavaFX SDK 25.0.1** ⚠️ **REQUIRED**
+2. **JavaFX SDK 25.0.1 REQUIRED**
    - Download from [Gluon](https://gluonhq.com/products/javafx/)
    - Extract to a location on your system (e.g., `C:\javafx-sdk-25.0.1`)
    - **IMPORTANT**: JavaFX is NOT included automatically with the JDK. You must download and install the SDK separately!
@@ -74,9 +82,10 @@ LibraryApp/
 │   │   └── Loans.java                     # Loan entity
 │   │
 │   └── ui/
-│       ├── *.fxml                         # FXML layout files
-│       ├── *.css                          # Stylesheets
-│       └── images/                        # Application images
+│       ├── library.fxml                   # Main FXML layout file
+│       ├── style.css                      # Main stylesheet
+│       └── images/                        # App images
+│       └── newScenes/                     # Secondary FXML layout files(for popup windows) and their stylesheets
 │
 ├── lib/
 │   └── sqlite-jdbc-3.51.1.0.jar          # SQLite JDBC driver
